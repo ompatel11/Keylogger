@@ -13,7 +13,7 @@ void BackSpace() {
 	oldfile >> contents;
 	oldfile.close();	//close log file
 
-	contents.pop_back();	//delete last character from the log file
+	contents.resize(contents.size()-1);	//delete last character from the log file
 
 	std::ofstream newfile("Log.txt", std::ios::trunc);	//Opening and clearing the file
 	newfile << contents;
